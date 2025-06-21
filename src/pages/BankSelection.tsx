@@ -36,7 +36,6 @@ export default function BankSelection() {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-security-50 via-background to-financial-50">
-      {/* Header */}
       <header className="sticky top-0 z-10 bg-white/80 backdrop-blur-md border-b border-security-200">
         <div className="container mx-auto px-4 py-4">
           <div className="flex items-center justify-between">
@@ -54,15 +53,13 @@ export default function BankSelection() {
               </div>
               <h1 className="text-xl font-bold text-security-900">SecurePay</h1>
             </div>
-            <div className="w-20" /> {/* Spacer for alignment */}
+            <div className="w-20"></div>
           </div>
         </div>
       </header>
 
-      {/* Main Content */}
       <main className="container mx-auto px-4 py-8">
         <div className="max-w-6xl mx-auto">
-          {/* Page Header */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -87,7 +84,6 @@ export default function BankSelection() {
             </div>
           </motion.div>
 
-          {/* Available Banks */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -125,7 +121,6 @@ export default function BankSelection() {
             </div>
           </motion.div>
 
-          {/* Unavailable Banks */}
           {unavailableBanks.length > 0 && (
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -162,7 +157,6 @@ export default function BankSelection() {
             </motion.div>
           )}
 
-          {/* Selection Summary */}
           {selectedBank && (
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -205,7 +199,6 @@ export default function BankSelection() {
             </motion.div>
           )}
 
-          {/* Security Notice */}
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}

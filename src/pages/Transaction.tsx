@@ -35,7 +35,6 @@ export default function Transaction() {
     timestamp: Date;
   } | null>(null);
 
-  // Redirect if no bank selected
   if (!state?.selectedBank) {
     navigate("/bank-selection");
     return null;
@@ -44,7 +43,6 @@ export default function Transaction() {
   const { selectedBank } = state;
 
   const handleTransactionConfirm = (amount: number, totalWithFee: number) => {
-    // Generate transaction ID
     const transactionId = `TXN${Date.now()}${Math.random().toString(36).substr(2, 9).toUpperCase()}`;
 
     setTransactionData({
@@ -86,7 +84,6 @@ export default function Transaction() {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-security-50 via-background to-financial-50">
-      {/* Header */}
       <header className="sticky top-0 z-10 bg-white/80 backdrop-blur-md border-b border-security-200">
         <div className="container mx-auto px-4 py-4">
           <div className="flex items-center justify-between">
@@ -105,17 +102,15 @@ export default function Transaction() {
               </div>
               <h1 className="text-xl font-bold text-security-900">SecurePay</h1>
             </div>
-            <div className="w-20" /> {/* Spacer for alignment */}
+            <div className="w-20"></div>
           </div>
         </div>
       </header>
 
-      {/* Main Content */}
       <main className="container mx-auto px-4 py-8">
         <div className="max-w-4xl mx-auto">
           <AnimatePresence mode="wait">
             {!transactionComplete ? (
-              /* Transaction Form */
               <motion.div
                 key="form"
                 initial={{ opacity: 0, y: 20 }}
@@ -123,7 +118,6 @@ export default function Transaction() {
                 exit={{ opacity: 0, y: -20 }}
                 className="space-y-8"
               >
-                {/* Page Header */}
                 <div className="text-center">
                   <h2 className="text-3xl font-bold text-security-900 mb-4">
                     Konfirmasi Transaksi
@@ -140,14 +134,12 @@ export default function Transaction() {
                 />
               </motion.div>
             ) : (
-              /* Transaction Success */
               <motion.div
                 key="success"
                 initial={{ opacity: 0, scale: 0.9 }}
                 animate={{ opacity: 1, scale: 1 }}
                 className="space-y-8"
               >
-                {/* Success Header */}
                 <motion.div
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
@@ -172,7 +164,6 @@ export default function Transaction() {
                   </p>
                 </motion.div>
 
-                {/* Transaction Receipt */}
                 <motion.div
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
@@ -194,7 +185,6 @@ export default function Transaction() {
                     </CardHeader>
 
                     <CardContent className="p-6 space-y-6">
-                      {/* Transaction ID */}
                       <div className="text-center space-y-2">
                         <p className="text-sm text-muted-foreground">
                           ID Transaksi
@@ -206,7 +196,6 @@ export default function Transaction() {
 
                       <Separator />
 
-                      {/* Transaction Details */}
                       <div className="space-y-4">
                         <div className="flex items-center space-x-3">
                           <Building className="w-5 h-5 text-muted-foreground" />
@@ -240,7 +229,6 @@ export default function Transaction() {
 
                       <Separator />
 
-                      {/* Amount Details */}
                       <div className="space-y-3">
                         <div className="flex justify-between">
                           <span className="text-muted-foreground">
@@ -273,13 +261,11 @@ export default function Transaction() {
                         </div>
                       </div>
 
-                      {/* Action Buttons */}
                       <div className="space-y-3">
                         <Button
                           variant="outline"
                           className="w-full"
                           onClick={() => {
-                            // Simulate download receipt
                             const element = document.createElement("a");
                             const file = new Blob(
                               [
@@ -317,7 +303,6 @@ export default function Transaction() {
                   </Card>
                 </motion.div>
 
-                {/* Security Notice */}
                 <motion.div
                   initial={{ opacity: 0 }}
                   animate={{ opacity: 1 }}
