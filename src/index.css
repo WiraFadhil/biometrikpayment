@@ -4,94 +4,168 @@
 
 @layer base {
   /**
-   * Tailwind CSS theme
-   * tailwind.config.ts expects the following color variables to be expressed as HSL values.
-   * A different format will require also updating the theme in tailwind.config.ts.
-  */
+   * Tailwind CSS theme with financial/security focused color palette
+   * All color variables expressed as HSL values for consistency with tailwind.config.ts
+   */
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    /* Base colors */
+    --background: 220 15% 97%;
+    --foreground: 220 25% 8%;
 
     --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
+    --card-foreground: 220 25% 8%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
+    --popover-foreground: 220 25% 8%;
 
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
+    /* Primary: Deep Navy Blue for trust and security */
+    --primary: 220 50% 12%;
+    --primary-foreground: 220 15% 97%;
 
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
+    --secondary: 220 15% 94%;
+    --secondary-foreground: 220 50% 12%;
 
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
+    --muted: 220 15% 94%;
+    --muted-foreground: 220 15% 45%;
 
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
+    --accent: 220 15% 94%;
+    --accent-foreground: 220 50% 12%;
 
-    --destructive: 0 84.2% 60.2%;
+    --destructive: 0 84% 60%;
     --destructive-foreground: 210 40% 98%;
 
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
+    --border: 220 15% 88%;
+    --input: 220 15% 88%;
+    --ring: 220 50% 12%;
 
     --radius: 0.5rem;
 
-    --sidebar-background: 0 0% 98%;
+    /* Security theme: Deep blues and teals for trust and security */
+    --security-50: 220 40% 98%;
+    --security-100: 220 40% 95%;
+    --security-200: 220 35% 88%;
+    --security-300: 220 30% 78%;
+    --security-400: 220 25% 65%;
+    --security-500: 220 30% 50%;
+    --security-600: 220 40% 35%;
+    --security-700: 220 50% 25%;
+    --security-800: 220 55% 18%;
+    --security-900: 220 60% 12%;
 
-    --sidebar-foreground: 240 5.3% 26.1%;
+    /* Financial theme: Professional blues and greens */
+    --financial-50: 200 50% 98%;
+    --financial-100: 200 45% 95%;
+    --financial-200: 200 40% 88%;
+    --financial-300: 200 35% 78%;
+    --financial-400: 200 30% 65%;
+    --financial-500: 200 40% 50%;
+    --financial-600: 200 50% 35%;
+    --financial-700: 200 55% 25%;
+    --financial-800: 200 60% 18%;
+    --financial-900: 200 65% 12%;
 
-    --sidebar-primary: 240 5.9% 10%;
+    /* Success: Fresh green for confirmations */
+    --success-50: 142 76% 96%;
+    --success-100: 142 72% 91%;
+    --success-200: 142 69% 82%;
+    --success-300: 142 66% 68%;
+    --success-400: 142 63% 51%;
+    --success-500: 142 71% 45%;
+    --success-600: 142 76% 36%;
+    --success-700: 142 77% 29%;
+    --success-800: 142 69% 25%;
+    --success-900: 142 61% 20%;
 
-    --sidebar-primary-foreground: 0 0% 98%;
-
-    --sidebar-accent: 240 4.8% 95.9%;
-
-    --sidebar-accent-foreground: 240 5.9% 10%;
-
-    --sidebar-border: 220 13% 91%;
-
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    /* Warning: Amber for scanning states */
+    --warning-50: 48 96% 95%;
+    --warning-100: 48 96% 89%;
+    --warning-200: 48 96% 77%;
+    --warning-300: 46 96% 64%;
+    --warning-400: 43 96% 56%;
+    --warning-500: 38 92% 50%;
+    --warning-600: 32 95% 44%;
+    --warning-700: 26 90% 37%;
+    --warning-800: 23 83% 31%;
+    --warning-900: 22 78% 26%;
   }
 
   .dark {
-    --background: 222.2 84% 4.9%;
-    --foreground: 210 40% 98%;
+    /* Dark mode with enhanced security theme */
+    --background: 220 60% 3%;
+    --foreground: 220 15% 97%;
 
-    --card: 222.2 84% 4.9%;
-    --card-foreground: 210 40% 98%;
+    --card: 220 55% 5%;
+    --card-foreground: 220 15% 97%;
 
-    --popover: 222.2 84% 4.9%;
-    --popover-foreground: 210 40% 98%;
+    --popover: 220 55% 5%;
+    --popover-foreground: 220 15% 97%;
 
-    --primary: 210 40% 98%;
-    --primary-foreground: 222.2 47.4% 11.2%;
+    --primary: 220 40% 85%;
+    --primary-foreground: 220 60% 8%;
 
-    --secondary: 217.2 32.6% 17.5%;
-    --secondary-foreground: 210 40% 98%;
+    --secondary: 220 50% 8%;
+    --secondary-foreground: 220 40% 85%;
 
-    --muted: 217.2 32.6% 17.5%;
-    --muted-foreground: 215 20.2% 65.1%;
+    --muted: 220 50% 8%;
+    --muted-foreground: 220 15% 65%;
 
-    --accent: 217.2 32.6% 17.5%;
-    --accent-foreground: 210 40% 98%;
+    --accent: 220 50% 8%;
+    --accent-foreground: 220 40% 85%;
 
-    --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive: 0 75% 55%;
+    --destructive-foreground: 220 15% 97%;
 
-    --border: 217.2 32.6% 17.5%;
-    --input: 217.2 32.6% 17.5%;
-    --ring: 212.7 26.8% 83.9%;
-    --sidebar-background: 240 5.9% 10%;
-    --sidebar-foreground: 240 4.8% 95.9%;
-    --sidebar-primary: 224.3 76.3% 48%;
-    --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 240 3.7% 15.9%;
-    --sidebar-accent-foreground: 240 4.8% 95.9%;
-    --sidebar-border: 240 3.7% 15.9%;
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    --border: 220 50% 12%;
+    --input: 220 50% 12%;
+    --ring: 220 40% 85%;
+
+    /* Dark security colors */
+    --security-50: 220 60% 8%;
+    --security-100: 220 55% 12%;
+    --security-200: 220 50% 18%;
+    --security-300: 220 45% 25%;
+    --security-400: 220 40% 35%;
+    --security-500: 220 35% 50%;
+    --security-600: 220 30% 65%;
+    --security-700: 220 25% 78%;
+    --security-800: 220 20% 88%;
+    --security-900: 220 15% 95%;
+
+    /* Dark financial colors */
+    --financial-50: 200 65% 8%;
+    --financial-100: 200 60% 12%;
+    --financial-200: 200 55% 18%;
+    --financial-300: 200 50% 25%;
+    --financial-400: 200 45% 35%;
+    --financial-500: 200 40% 50%;
+    --financial-600: 200 35% 65%;
+    --financial-700: 200 30% 78%;
+    --financial-800: 200 25% 88%;
+    --financial-900: 200 20% 95%;
+
+    /* Dark success colors */
+    --success-50: 142 61% 15%;
+    --success-100: 142 69% 20%;
+    --success-200: 142 77% 25%;
+    --success-300: 142 76% 29%;
+    --success-400: 142 71% 36%;
+    --success-500: 142 63% 45%;
+    --success-600: 142 66% 51%;
+    --success-700: 142 69% 68%;
+    --success-800: 142 72% 82%;
+    --success-900: 142 76% 91%;
+
+    /* Dark warning colors */
+    --warning-50: 22 78% 20%;
+    --warning-100: 23 83% 26%;
+    --warning-200: 26 90% 31%;
+    --warning-300: 32 95% 37%;
+    --warning-400: 38 92% 44%;
+    --warning-500: 43 96% 50%;
+    --warning-600: 46 96% 56%;
+    --warning-700: 48 96% 64%;
+    --warning-800: 48 96% 77%;
+    --warning-900: 48 96% 89%;
   }
 }
 
@@ -101,6 +175,41 @@
   }
 
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground font-sans antialiased;
+  }
+
+  /* Custom scrollbar styling */
+  ::-webkit-scrollbar {
+    width: 6px;
+  }
+
+  ::-webkit-scrollbar-track {
+    @apply bg-muted;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    @apply bg-muted-foreground/30 rounded-full;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    @apply bg-muted-foreground/50;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  .glass-morphism {
+    @apply backdrop-blur-xl bg-white/10 border border-white/20;
+  }
+
+  .security-gradient {
+    @apply bg-gradient-to-br from-security-600 to-security-800;
+  }
+
+  .financial-gradient {
+    @apply bg-gradient-to-br from-financial-500 to-financial-700;
   }
 }

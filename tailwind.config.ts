@@ -52,15 +52,54 @@ export default {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
         },
-        sidebar: {
-          DEFAULT: "hsl(var(--sidebar-background))",
-          foreground: "hsl(var(--sidebar-foreground))",
-          primary: "hsl(var(--sidebar-primary))",
-          "primary-foreground": "hsl(var(--sidebar-primary-foreground))",
-          accent: "hsl(var(--sidebar-accent))",
-          "accent-foreground": "hsl(var(--sidebar-accent-foreground))",
-          border: "hsl(var(--sidebar-border))",
-          ring: "hsl(var(--sidebar-ring))",
+        // Financial/Security themed colors
+        security: {
+          50: "hsl(var(--security-50))",
+          100: "hsl(var(--security-100))",
+          200: "hsl(var(--security-200))",
+          300: "hsl(var(--security-300))",
+          400: "hsl(var(--security-400))",
+          500: "hsl(var(--security-500))",
+          600: "hsl(var(--security-600))",
+          700: "hsl(var(--security-700))",
+          800: "hsl(var(--security-800))",
+          900: "hsl(var(--security-900))",
+        },
+        financial: {
+          50: "hsl(var(--financial-50))",
+          100: "hsl(var(--financial-100))",
+          200: "hsl(var(--financial-200))",
+          300: "hsl(var(--financial-300))",
+          400: "hsl(var(--financial-400))",
+          500: "hsl(var(--financial-500))",
+          600: "hsl(var(--financial-600))",
+          700: "hsl(var(--financial-700))",
+          800: "hsl(var(--financial-800))",
+          900: "hsl(var(--financial-900))",
+        },
+        success: {
+          50: "hsl(var(--success-50))",
+          100: "hsl(var(--success-100))",
+          200: "hsl(var(--success-200))",
+          300: "hsl(var(--success-300))",
+          400: "hsl(var(--success-400))",
+          500: "hsl(var(--success-500))",
+          600: "hsl(var(--success-600))",
+          700: "hsl(var(--success-700))",
+          800: "hsl(var(--success-800))",
+          900: "hsl(var(--success-900))",
+        },
+        warning: {
+          50: "hsl(var(--warning-50))",
+          100: "hsl(var(--warning-100))",
+          200: "hsl(var(--warning-200))",
+          300: "hsl(var(--warning-300))",
+          400: "hsl(var(--warning-400))",
+          500: "hsl(var(--warning-500))",
+          600: "hsl(var(--warning-600))",
+          700: "hsl(var(--warning-700))",
+          800: "hsl(var(--warning-800))",
+          900: "hsl(var(--warning-900))",
         },
       },
       borderRadius: {
@@ -85,10 +124,67 @@ export default {
             height: "0",
           },
         },
+        "fingerprint-scan": {
+          "0%": {
+            transform: "scale(0.8)",
+            opacity: "0.5",
+          },
+          "50%": {
+            transform: "scale(1.1)",
+            opacity: "1",
+          },
+          "100%": {
+            transform: "scale(1)",
+            opacity: "0.8",
+          },
+        },
+        "pulse-ring": {
+          "0%": {
+            transform: "scale(0.8)",
+            opacity: "1",
+          },
+          "100%": {
+            transform: "scale(2.4)",
+            opacity: "0",
+          },
+        },
+        "fade-in-up": {
+          "0%": {
+            opacity: "0",
+            transform: "translateY(10px)",
+          },
+          "100%": {
+            opacity: "1",
+            transform: "translateY(0)",
+          },
+        },
+        "slide-in": {
+          "0%": {
+            opacity: "0",
+            transform: "translateX(-20px)",
+          },
+          "100%": {
+            opacity: "1",
+            transform: "translateX(0)",
+          },
+        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
+        "fingerprint-scan": "fingerprint-scan 2s ease-in-out infinite",
+        "pulse-ring": "pulse-ring 1.5s ease-out infinite",
+        "fade-in-up": "fade-in-up 0.6s ease-out",
+        "slide-in": "slide-in 0.4s ease-out",
+      },
+      backgroundImage: {
+        "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
+        "gradient-conic":
+          "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
+        "security-gradient":
+          "linear-gradient(135deg, hsl(var(--security-600)), hsl(var(--security-800)))",
+        "financial-gradient":
+          "linear-gradient(135deg, hsl(var(--financial-500)), hsl(var(--financial-700)))",
       },
     },
   },
